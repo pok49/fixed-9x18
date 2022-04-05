@@ -1,0 +1,6 @@
+* BDF font editor
+The edtor used is =gbdfed= (from the Debian repo).
+
+* Unifont
+Some missing glyphs are taken from the [[http://savannah.gnu.org/projects/unifont/][GNU Unifont]] Project.
+

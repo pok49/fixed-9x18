@@ -17,10 +17,9 @@ know a similar problem with O/0 and 1/l/I disambiguation.
 In a Unicode font the problem is even worse, because the
 Latin/Cyrillic ambiguity is complicated with the Greek. Still, I've
 tried to modify a couple of the bitmapped BDF [Unicode fonts by Markus
-Kuhn](http://www.cl.cam.ac.uk/~mgk25/ucs-fonts.html) which I use on
-Sparc computers so that I can see the difference and guess which
-alphabet a given letter belongs to. Actually these are 9x18 fonts in
-the plain and bold flavors:
+Kuhn](http://www.cl.cam.ac.uk/~mgk25/ucs-fonts.html) which I use on Sparc computers so that I can see the difference
+and guess which alphabet a given letter belongs to. Actually these are
+9x18 fonts in the plain and bold flavors:
 
   `-Pok-Fixed-Medium-R-Normal--18-120-100-100-C-90-ISO10646-1`  
   `-Pok-Fixed-Medium-R-Bold--18-120-100-100-C-90-ISO10646-1`
