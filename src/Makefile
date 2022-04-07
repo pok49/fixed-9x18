@@ -10,17 +10,19 @@ whereto = /usr/share/fonts/X11/misc # arg to the install target
 SHELL=/bin/bash
 
 
-all: 9x18.pcf.gz
+all: 9x18.pcf.gz 9x18B.pcf.gz
 
-9x18.pcf.gz:
-	for i in *.bdf ; do \
-	  bdftopcf $$i >$${i%.bdf}.pcf ; \
-	done
-	gzip -9 *.pcf
+%.pcf.gz:	%.bdf
+	bdftopcf $< | gzip -9 > $@
+# 9x18.pcf.gz:
+# 	for i in *.bdf ; do \
+# 	  bdftopcf $$i >$${i%.bdf}.pcf ; \
+# 	done
+# 	gzip -9 *.pcf
 
-install: 9x18.pcf.gz
+install: 9x18.pcf.gz 9x18B.pcf.gz
 	test -e $(whereto) && test -d $(whereto) || mkdir -p $(whereto)
-	mv *.pcf.gz $(whereto)
+	cp -u *.pcf.gz $(whereto)
 	cd $(whereto) ; mkfontdir
 	xset +fp $(whereto) # update the font-path for the current session
 
