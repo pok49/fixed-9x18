@@ -14,15 +14,10 @@ all: 9x18.pcf.gz 9x18B.pcf.gz
 
 %.pcf.gz:	%.bdf
 	bdftopcf $< | gzip -9 > $@
-# 9x18.pcf.gz:
-# 	for i in *.bdf ; do \
-# 	  bdftopcf $$i >$${i%.bdf}.pcf ; \
-# 	done
-# 	gzip -9 *.pcf
 
 install: 9x18.pcf.gz 9x18B.pcf.gz
 	test -e $(whereto) && test -d $(whereto) || mkdir -p $(whereto)
-	cp -u *.pcf.gz $(whereto)
+	cp -u $< $(whereto)
 	cd $(whereto) ; mkfontdir
 	xset +fp $(whereto) # update the font-path for the current session
 
