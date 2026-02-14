@@ -34,15 +34,17 @@ wrote in his advice to contributors:
 In principle this is reasonable, provided that “consistent” does not
 imply “identical”. The *Gill Sans* font is extremely consistent in
 that it identifies `1Il` as well as `Oo`; here is a specimen
-[from Wikipedia](https://en.wikipedia.org/wiki/Gill_Sans):
+[from Wikipedia](https://commons.wikimedia.org/wiki/File:Gill_Sans_specimen_sheet.jpg):
 
-![Gill Sans specimen](https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Gill_Sans_specimen_sheet.jpg/394px-Gill_Sans_specimen_sheet.jpg)
+![Gill Sans specimen](https://upload.wikimedia.org/wikipedia/commons/9/96/Gill_Sans_specimen_sheet.jpg)
 
 But this is unacceptable in a programmer font, and the `fixed` font
 family in question makes the corresponding glyphs distinguishable.
 Similarly the English “a copy” should be distinguishable from the
 Russian “а сору” (e.g. «а сору было много») — such words are often
-confused in automatic text recognition and require manual correction).
+confused in automatic text recognition and require manual correction:
+
+!["a copy in Cyr/Lat"](img/a_copy.png "“a copy” image")
 
 ### Screenshots
  * Digit/letter disambiguation:  
@@ -100,6 +102,10 @@ into your `~/.xinitrc` or the startup file of your window system:
 or
 
     xset +fp ~/.fonts
+
+You may need enable bitmap fonts in `/etc/fonts/conf.d` and update
+`font-cache` with sudo `fc-cache -fv`.
+<!-- but still not see the bitmap fonts in `fc-list` -->
 
 <!--
 https://wiki.archlinux.org/index.php/Fonts#Installation
