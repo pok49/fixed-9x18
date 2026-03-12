@@ -46,6 +46,12 @@ confused in automatic text recognition and require manual correction:
 
 !["a copy in Cyr/Lat"](img/a_copy.png "“a copy” image")
 
+### An Unambiguous Vector Font
+Presently the bitmap fonts are largely considered obsolete. I have
+made an unambiguous ttf font [Iosevka LGC](https://github.com/pok49/ioLGC). It has the many advantages
+of the vector fonts, but with the dark themes I still prefer my bitmap
+font.
+
 ### Screenshots
  * Digit/letter disambiguation:  
    ![1IlІ 3_З 4_Ч 0OОΟ](img/digits.png)  
